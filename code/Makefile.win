@@ -1,0 +1,76 @@
+# Project: finalWork
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o programView.o about.o help.o back.o programViewHandle.o register.o login.o gameView.o gameViewHandle.o commonGame.o fileRead.o fileCW.o creatDiretory.o clear.o judgeAccount.o lookData.o
+LINKOBJ  = main.o programView.o about.o help.o back.o programViewHandle.o register.o login.o gameView.o gameViewHandle.o commonGame.o fileRead.o fileCW.o creatDiretory.o clear.o judgeAccount.o lookData.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = finalWork.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c99
+CFLAGS   = $(INCS) -g3 -std=c99
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+programView.o: programView.c
+	$(CC) -c programView.c -o programView.o $(CFLAGS)
+
+about.o: about.c
+	$(CC) -c about.c -o about.o $(CFLAGS)
+
+help.o: help.c
+	$(CC) -c help.c -o help.o $(CFLAGS)
+
+back.o: back.c
+	$(CC) -c back.c -o back.o $(CFLAGS)
+
+programViewHandle.o: programViewHandle.c
+	$(CC) -c programViewHandle.c -o programViewHandle.o $(CFLAGS)
+
+register.o: register.c
+	$(CC) -c register.c -o register.o $(CFLAGS)
+
+login.o: login.c
+	$(CC) -c login.c -o login.o $(CFLAGS)
+
+gameView.o: gameView.c
+	$(CC) -c gameView.c -o gameView.o $(CFLAGS)
+
+gameViewHandle.o: gameViewHandle.c
+	$(CC) -c gameViewHandle.c -o gameViewHandle.o $(CFLAGS)
+
+commonGame.o: commonGame.c
+	$(CC) -c commonGame.c -o commonGame.o $(CFLAGS)
+
+fileRead.o: fileRead.c
+	$(CC) -c fileRead.c -o fileRead.o $(CFLAGS)
+
+fileCW.o: fileCW.c
+	$(CC) -c fileCW.c -o fileCW.o $(CFLAGS)
+
+creatDiretory.o: creatDiretory.c
+	$(CC) -c creatDiretory.c -o creatDiretory.o $(CFLAGS)
+
+clear.o: clear.c
+	$(CC) -c clear.c -o clear.o $(CFLAGS)
+
+judgeAccount.o: judgeAccount.c
+	$(CC) -c judgeAccount.c -o judgeAccount.o $(CFLAGS)
+
+lookData.o: lookData.c
+	$(CC) -c lookData.c -o lookData.o $(CFLAGS)
